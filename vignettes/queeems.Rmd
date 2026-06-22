@@ -28,13 +28,13 @@ vignette: |
 
 
 # Introduction
-`queeems` is a R^[@cran2025] package hosted on the Bioconductor^[@bioc2004]
+`queeems` is a R [@cran2025] package hosted on the Bioconductor [@bioc2004]
 platform. The package is useful for assessing the quality of genetic data
 that are meant for evolutionary investigations. Some invaluable methods
 and resources are available in the literature for similar purpose. These
-include: DAMBE^[@xia2002], SatuTe^[@manuel2025], TreSpEx^[@struck2014],
-PAUP^[@swoff2002], RASA^[@lyons1996] and MUST^[@herve1993]. Interested
-reader may consult Fleming et al^[@fleming2023] for a short review of some
+include: DAMBE [@xia2002], SatuTe [@manuel2025], TreSpEx [@struck2014],
+PAUP [@swoff2002], RASA [@lyons1996] and MUST [@herve1993]. Interested
+reader may consult @fleming2023 for a short review of some
 of the remarkable contributions to the science of molecular saturation
 analyses. These existing techniques are designed primarily for investigations
 related to phylogeny reconstruction and many of them rely on adhoc
@@ -60,7 +60,7 @@ install line above: `BiocManager::install(version="devel")`.
 
 # Data
 The molecular sequences analysed herein are generated with the
-`scoup`^[@sadiq2026] package that allows genetic sequences to be simulated
+`scoup` [@sadiq2026] package that allows genetic sequences to be simulated
 following a simplified Ornstein-Uhlenbeck (OU) process. A R file that contains
 the simulation code and a folder that contains the simulated data are available
 in the `inst/extdata/example/` folder within the `queeems` package. The
@@ -94,15 +94,15 @@ There are two primary uses of `queeems`: (a.) to generate molecular entropy
 estimates and (b.) to make inference about the saturation status of genetic
 data. I demonstrate both cases by considering two sources of molecular
 substitution saturation: (a.) time since divergence from common ancestor
-as measured by tree lengths^[@xia2002] and (b.) speed of molecular
+as measured by tree lengths [@xia2002] and (b.) speed of molecular
 substitution as quantified by the magnitude of positive natural selection
-pressure^[@manuel2025].
+pressure [@manuel2025].
 
 ## Tree length analyses
 In the code chunk below, I used the `queeems::seqSaturation` function to
 obtain site-wise and overall Bayes factors so that I may assess the
 saturation level of the corresponding simulated sequences. I also used the
-`queeems::molentropy` function to obtain Shannon^[@shannon1948] information
+`queeems::molentropy` function to obtain @shannon1948 information
 entropy indices with respect to nucleotide, codon and amino acid bases. In
 addition to the tabulated `scoup` inputs, with respect to all the data sets
 generated for this section, the variance of non-synonymous selection
@@ -276,7 +276,7 @@ as a robust unit for quantifying saturation. Amino acid appear to be moving
 faster to saturation (that is, closer to one) for shorter lengths. As the
 lengths get longer, nucleotide bases appears to close the gap with amino
 acids and most probably surpass it. The entropy analyses presented here
-were obtained by applying the popular Shannon^[@shannon1948] method on the
+were obtained by applying the popular @shannon1948 method on the
 base frequencies. Other counting metrics are accessible in `queeems`. These
 include: the `cncsentropy` and the `codondifferindex` functions. The
 package is also designed in a way that permits users to opt for `Renyi`
@@ -343,7 +343,7 @@ over the five data replicates analysed for each $\sigma_{`n`}^{2}$ value.
 The analytical estimates of the ratio of non-synonymous to synonymous
 substitution rates ($\mathrm{d}N/\mathrm{d}S$) were obtained along with
 the sequences from `scoup`, where they were calculated using expressions
-from Spielman and Wilke^[@spielman2015].
+from @spielman2015.
 
 ```{r dnds test, eval=TRUE}
 # ><>< # Retrieve path to simulated tutorial data folder
@@ -463,7 +463,7 @@ Bioconductor R Package.</em>
 # Version Information
 
 The `queeems` package adopts versioning requirement of the
-Bioconductor^[@bioc2004] platform. Its first version (v1.0.0) includes one
+Bioconductor [@bioc2004] platform. Its first version (v1.0.0) includes one
 Bayesian saturation analysis method. Subsequent versions (>= v2.x.x) of the
 package should contain more methods as described in the `seqSaturation`
 manual page.
